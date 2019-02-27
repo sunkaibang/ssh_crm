@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ssh_crmPlus"
+  id="myeclipse.1532948673344"
+  context-root="/ssh_crmPlus"
+  j2ee-spec="6.0"
+  archive="ssh_crmPlus.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

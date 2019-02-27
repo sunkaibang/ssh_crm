@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="crm.domain.Customer" table="crm_customer">
+		<id name="cid" column="cid">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="custName" column="custName" length="8" not-null="true"></property>
+	<!-- 	<property name="custLevel" column="custLevel" length="20"></property> -->
+		<property name="custSource" column="custSource" length="11"></property>
+		<property name="custPhone" column="custPhone" not-null="true" length="11"></property>
+		<property name="custMoble" column="custMoble" length="11"></property>
+		
+		<set name="linkManSet" inverse="true" cascade="delete">
+			<key column="cid"></key>
+			<one-to-many class="crm.domain.LinkMan"/>
+		</set>
+		<set name="visitSet" inverse="true" cascade="delete">
+			<key column="cid"></key>
+			<one-to-many class="crm.domain.Visit"/>
+		</set>
+		<many-to-one name="dataDictionary" class="crm.domain.DataDictionary" column="custLevel"></many-to-one>
+	</class>	
+	
+</hibernate-mapping>

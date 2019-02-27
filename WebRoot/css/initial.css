@@ -1,0 +1,44 @@
+a {
+	text-decoration: none;
+}
+
+a:link,a:visited {
+	color: #999999;
+}
+a:hover,a:active {
+	color: red;
+}
+
+
+body {
+	background: url(../img/bg.jpg);
+}
+
+/*初始控件大小*/
+.size {
+	width: 600px;
+	margin: 0 auto;
+}
+
+/*初始按钮大小*/
+.button {
+	width: 100px;
+	height: 25px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clf {
+	clear: both;
+}
+
+.msg {
+	color: red;
+}
+

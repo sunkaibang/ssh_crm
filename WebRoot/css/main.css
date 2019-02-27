@@ -1,0 +1,37 @@
+/*标签部分*/
+.title_main {
+	height: 90px;
+	background: bisque;
+	box-shadow: gray;
+	width: 1325px;
+	margin: 0 auto;
+}
+
+/*菜单*/
+.menu {
+	width: 220px;
+}
+
+/*主题页面*/
+.mian {
+	margin-top: 3px;
+	margin-left: 0px;
+	width: 1102px;
+	height: 334px;
+	box-shadow: 1px 1px 1px 1px gray;
+}
+
+.body {
+	/*margin-left: 93px;*/
+	width: 1325px;
+	margin: 0 auto;
+}
+
+.title_div {
+	margin-left: 7px;
+	font-size: 38px;
+}
+
+.title_left_div {
+	margin-right: 15px;
+}

@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+td, th {
+	width: 100px;
+	text-align:center;
+}
+
+.pageInput {
+	width: 20px;
+}
+

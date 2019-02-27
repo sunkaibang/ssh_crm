@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="crm" extends="struts-default" namespace="/">
+	
+		<action name="manager_*" class="managerAction" method="{1}">
+			<result name="login_fail">/login.jsp</result>
+			<result name="login_success">/jsps/main.jsp</result>
+			<result name="login_page">/login.jsp</result>
+			<result name="register_page">/register.jsp</result>
+			<result name="register_result">/msg.jsp</result>
+		</action>
+		
+		<action name="customer_*" class="customerAction" method="{1}">
+			<result name="add_customer_page" type="redirectAction">dataDictionary_toAddCustomer</result>
+			<result name="customer_list">/jsps/customer/listcustomer.jsp</result>
+			<result name="redirect_customer_list" type="redirectAction">customer_findAllCustomer</result>
+			<result name="mod_customer_page">/jsps/customer/modcustomer.jsp</result>
+			<result name="customer_source">/jsps/countpage/scourcecustomer.jsp</result>
+			<result name="customer_level">/jsps/countpage/levercustomer.jsp</result>
+		</action>
+		
+		<action name="linkman_*" class="linkManAction" method="{1}">
+			<result name="add_customer_page">/jsps/linkman/addlinkman.jsp</result>
+			<result name="chain_add_customer_page" type="redirectAction">linkman_addLinkManPage</result>
+			<result name="linkman_page">/jsps/linkman/listlinkman.jsp</result>
+			<result name="mod_linkman_page">/jsps/linkman/modlinkman.jsp</result>
+			<result name="re_mod_linkman_page" type="redirectAction">linkman_modifyLinkManFirst</result>
+			<result name="redirect_linkMan_list" type="redirectAction">linkman_findAllLinkMan</result>
+		</action>
+		
+		<action name="visit_*" class="visitAction" method="{1}">
+			<result name="add_visit_page">/jsps/visit/addvisit.jsp</result>
+			<result name="re_add_visit_page" type="redirectAction">visit_addVisitPage</result>
+			<result name="visit_list">/jsps/visit/listvisit.jsp</result>
+			<result name="re_visit_list" type="redirectAction">visit_findAllVisit</result>
+			<result name="mod_visit_page">/jsps/visit/modvisit.jsp</result>
+			<result name="re_mod_visit_page" type="redirectAction">visit_modifyVisitFirst</result> 
+		</action>
+		
+		<action name="dataDictionary_*" class="dataDictionaryAction" method="{1}">
+			<result name="add_customer_page">/jsps/customer/addcustomer.jsp</result>
+			<result name='customer_condition_page'>/jsps/querycondition/customer.jsp</result>
+		</action>
+	</package>
+</struts>

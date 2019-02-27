@@ -1,0 +1,17 @@
+/*标题*/
+.title {
+	text-align: center;
+	color: coral;
+	margin-top: 100px;
+}
+
+/*登录区域*/
+.login_div {
+	margin-top: 30px;
+	color: cornflowerblue;
+	text-align: center;
+}
+
+.login_table {
+	margin: 0 auto;
+}

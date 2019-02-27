@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	
+	<session-factory>
+	    <!-- <property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property> -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<mapping resource="crm/domain/Manager.hbm.xml"/>
+		<mapping resource="crm/domain/Customer.hbm.xml"/>
+		<mapping resource="crm/domain/LinkMan.hbm.xml"/>
+		<mapping resource="crm/domain/visit.hbm.xml"/>
+		<mapping resource="crm/domain/DataDictionary.hbm.xml"/>
+		
+	</session-factory>	
+</hibernate-configuration>
